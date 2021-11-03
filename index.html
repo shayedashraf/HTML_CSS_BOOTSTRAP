@@ -13,13 +13,30 @@
     <h3>Welcome to my Website</h3>
     <form action="user.js" method="get">
         <label>Your Username</label>
-        <input type="text" autofocus> <br>
+        <input type="text" autofocus required> <br>
         <label for="">Your Password</label>
         <input type="password"> <br>
 
 
 
     </form>
+    <h1 id="empty"></h1>
+    <button type="button" onclick="MyLocation()" id="location">MY LOCATION</button>
+    <script>
+        function MyLocation() {
+            var h = document.getElementById("empty")
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(showLocation)
+
+            }
+        }
+        function showLocation() {
+            h.innerHTML = "long :" + position.coords.longitude;
+
+        }
+
+
+    </script>
 
 </body>
 

@@ -10,3 +10,12 @@ input{
     margin: 10px;
 
 }
+#location{
+    text-align: center;
+    color: green;
+    margin: 20px;
+    padding: 20px;
+    text-size-adjust: 25px;
+
+
+}
